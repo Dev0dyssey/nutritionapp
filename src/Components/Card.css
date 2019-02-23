@@ -1,0 +1,38 @@
+/* SET OUT THE GRID VIEW LAYOUT */
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+
+.image {
+    cursor: pointer;
+}
+
+/* SPECIFY WIDTH OF THE IMAGES TO MAKE THE LAYOUT MORE CONCISE */
+.image-list image {
+    width: 250px;
+}
+
+.meal-photo {grid-area: meal-photo;}
+.meal-name {grid-area: meal-name;}
+.meal-description {grid-area: meal-description;}
+
+.mealInfo {
+    border: 1px solid black;
+    height: 400px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        'meal-photo meal-photo meal-photo meal-photo meal-name meal-name'
+        'meal-photo meal-photo meal-photo meal-photo meal-description meal-description';
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.meal-photo {
+    max-width: 100%;
+    max-height: 400px;
+}
