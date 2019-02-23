@@ -28,11 +28,34 @@
     grid-template-areas: 
         'meal-photo meal-photo meal-photo meal-photo meal-name meal-name'
         'meal-photo meal-photo meal-photo meal-photo meal-description meal-description';
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* .meal-detail {
+    border: 1px solid rgb(189, 186, 186);
+    border-radius: 10px;
+} */
+
+img.meal-photo {
+    border-right: 1px solid rgb(219, 219, 219);
 }
 
 .meal-photo {
+    padding-left: 10px;
+    padding-right: 15rem;
     max-width: 100%;
     max-height: 400px;
+}
+
+.information {
+    animation-duration: 3s;
+    animation-name: fadein;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
