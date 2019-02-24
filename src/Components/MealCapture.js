@@ -16,7 +16,7 @@ class MealCapture extends React.Component {
         selectedName: '',
         showComponent: 'none',
         urls: '',
-        nutrition: ''
+        nutrition: []
     }
 
     // ASYNC FUNCTION TO CAPTURE API CALL RESPONSE AS WELL AS TO SET STATE WITH THE VALUE THAT WAS PROVIDED BYT THE <CAPTUREFORM /> ELEMENT
@@ -33,7 +33,8 @@ class MealCapture extends React.Component {
 
     mealData = async (term) => {
         const answer = await mealdatabase.get(`${term}&app_id=d0c3cf36&app_key=11cf8167af78fde44896a9793debed00`);
-        this.setState({nutrition: answer.data.hints[0].food.nutrients.ENERC_KCAL});
+        this.setState({nutrition: answer.data.hints});
+
         console.log(this.state.nutrition);
     }
 
@@ -49,6 +50,16 @@ class MealCapture extends React.Component {
 
     render() {
     // DISPLAY OF THE CAPTURE FORM, MEAL RESULTS AND THE CARD HOLDING THE MEAL SUMMARY
+    // MAPPING OVER NUTRITION INFORMATION TO GET THE DATA NEEDED, SHOWING ONLY THE FIRST SET OF RESULTS USING SLIC()
+    const info = this.state.nutrition.slice(0,1).map((item) =>
+        // JSX FRAGMENT TO REDUCE THE AMOUNT O <DIV> USED
+        <>
+            <div>Calories: {item.food.nutrients.ENERC_KCAL}</div>
+            <div>Fat: {item.food.nutrients.FAT}%</div>
+            <div>Carbs: {item.food.nutrients.CHOCDF}%</div>
+        </>
+    );
+
     return(   
             <div className="ui container" style={{textAlign: 'center', marginTop: '10px'}}>
                 <h1>MEAL CALORIE APP</h1>
@@ -70,7 +81,7 @@ class MealCapture extends React.Component {
                     mealName = {this.state.selectedName}
                     showComponent = {this.state.showComponent}
                     urls = {this.state.urls}
-                    nutrition = {this.state.nutrition}
+                    nutrition = {info}
                 />
 
                 <Card 

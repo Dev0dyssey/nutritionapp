@@ -53,7 +53,7 @@ class CaptureForm extends React.Component {
                 className="ui button" 
                 type="submit" 
                 onClick={() => {this.onButtonClick(); this.logic_Help();}}>
-                Capture Meal Data
+                Capture Meal
             </button>
         </div>
     );

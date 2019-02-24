@@ -16,7 +16,10 @@
 
 .meal-photo {grid-area: meal-photo;}
 .meal-name {grid-area: meal-name;}
-.meal-description {grid-area: meal-description;}
+.meal-description {
+    grid-area: meal-description;
+    text-align: left;
+}
 
 .mealInfo {
     border: 1px solid black;
@@ -53,6 +56,7 @@ img.meal-photo {
 .information {
     animation-duration: 3s;
     animation-name: fadein;
+    text-align: left;
 }
 
 @keyframes fadein {
