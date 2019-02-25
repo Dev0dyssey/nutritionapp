@@ -73,7 +73,7 @@ class MealCapture extends React.Component {
                 <div style={{marginTop: '10px'}}>
                 YOUR MEALS:
                     <br />
-                    <span id="Meal">{this.state.meal} {this.state.calories}</span>
+                    <span id="Meal">{this.state.meal} {this.state.calories}kcal</span>
                 </div>
 
                 <MealDetail

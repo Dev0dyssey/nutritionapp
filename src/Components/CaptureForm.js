@@ -50,7 +50,7 @@ class CaptureForm extends React.Component {
             {/* BUTTON TO CAPTURE THE MEAL DATA. WILL HAVE TEXT CHANGE ONCE CLICKED FOR THE FIRST SET OF DATA; STATE UPDATE IN INDEX.JS */}
             <button 
                 style={{marginTop: '10px'}} 
-                className="ui button" 
+                className="ui violet button" 
                 type="submit" 
                 onClick={() => {this.onButtonClick(); this.logic_Help();}}>
                 Capture Meal
