@@ -8,7 +8,7 @@ class Comment extends React.Component {
 
     render(){
         return(
-            <div className="ui form description">
+        <div className="ui form description">
             <input 
                 style = {{textAlign: 'center'}}
                 type="text"

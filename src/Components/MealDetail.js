@@ -13,6 +13,18 @@ const MealDetail = ({detail, mealName, showComponent, urls, nutrition}) => {
                     </div>
                 <div className="meal-description">
                     {detail}
+                    <br/>
+                    <div className="ui buttons">
+                        <button className="tiny ui button">Add Comments</button>
+                        <button className="ui instagram button">
+                            <i className="instagram icon"></i>
+                            Instagram
+                        </button>
+                    </div>
+                    <br/>
+                    <div className="ui mini input">
+                        <input type="text" style={{display: 'none'}}></input>
+                    </div>
                 </div>
         </div>
 
