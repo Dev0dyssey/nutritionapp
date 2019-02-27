@@ -15,7 +15,7 @@ const MealDetail = ({detail, mealName, showComponent, urls, nutrition}) => {
                     {detail}
                     <br/>
                     <div className="ui buttons">
-                        <button className="tiny ui button">Add Comments</button>
+                        <button className="tiny ui button">Add Meal Comments</button>
                         <button className="ui instagram button">
                             <i className="instagram icon"></i>
                             Instagram
