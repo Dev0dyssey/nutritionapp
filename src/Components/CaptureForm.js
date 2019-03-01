@@ -31,6 +31,7 @@ class CaptureForm extends React.Component {
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <input 
+                            style={{textAlign: "center", width: '50%'}}
                             placeholder="Enter your Meal"  
                             type="text"
                             value={this.state.meal}
@@ -38,7 +39,7 @@ class CaptureForm extends React.Component {
                         </input>
                         <br/>
                         <input 
-                            style={{marginTop: '5px'}} 
+                            style={{marginTop: '5px', textAlign: "center", width: '50%'}} 
                             placeholder="Enter meal Calories" 
                             type="number" 
                             value={this.state.cal}

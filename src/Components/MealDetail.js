@@ -1,25 +1,33 @@
 import React from 'react';
 
-const MealDetail = ({detail, mealName, showComponent, urls, nutrition}) => {
+const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
 
     return(
         <div className="meal-detail container" style={{display: `${showComponent}`}}>
             <img className="meal-photo"src={urls.regular}/>
                     <div className="information">
-                        <h4>General Nutritional Information</h4>
+                        <h4 style={{fontSize: "25px", fontWeight: "400"}}>General Nutritional Information</h4>
                             <strong>{mealName}</strong>
                         <br/>
                             {nutrition}
                     </div>
                 <div className="meal-description">
-                    {detail}
-                    <br/>
                     <div className="ui buttons">
-                        <button className="tiny ui button">Add Meal Comments</button>
                         <button className="ui instagram button">
                             <i className="instagram icon"></i>
                             Instagram
                         </button>
+
+                        <button className="ui facebook button">
+                            <i className="facebook icon"></i>
+                            Facebook
+                        </button>
+
+                        <button className="ui twitter button">
+                            <i className="twitter button"></i>
+                            Twitter
+                        </button>
+
                     </div>
                     <br/>
                     <div className="ui mini input">

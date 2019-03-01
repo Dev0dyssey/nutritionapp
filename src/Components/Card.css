@@ -57,6 +57,7 @@ img.meal-photo {
     animation-duration: 3s;
     animation-name: fadein;
     text-align: left;
+    font-size: 16px;
 }
 
 @keyframes fadein {
