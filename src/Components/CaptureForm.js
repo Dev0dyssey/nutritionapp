@@ -27,7 +27,6 @@ class CaptureForm extends React.Component {
     return (
         <div>
             {/* INPUT FIELDS, MIGHT HAVE TO BE STYLED IN A DEDICATED CSS SHEET LATER ON. OR USE SEMANTIC UI/BOOTSTRAP */}
-            <div className="ui segment">
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <input 
@@ -46,12 +45,11 @@ class CaptureForm extends React.Component {
                             onChange={e => this.setState({cal: e.target.value})}>
                         </input>
                     </div>
-                </form>
-            </div>
+                </form> 
             {/* BUTTON TO CAPTURE THE MEAL DATA. WILL HAVE TEXT CHANGE ONCE CLICKED FOR THE FIRST SET OF DATA; STATE UPDATE IN INDEX.JS */}
             <button 
-                style={{marginTop: '10px'}} 
-                className="ui violet button" 
+                style={{marginTop: '10px', color: 'white', backgroundColor: '#2ecc71'}} 
+                className="ui button" 
                 type="submit" 
                 onClick={() => {this.onButtonClick(); this.logic_Help();}}>
                 Capture Meal

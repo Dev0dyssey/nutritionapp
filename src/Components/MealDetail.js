@@ -3,7 +3,7 @@ import React from 'react';
 const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
 
     return(
-        <div className="meal-detail container" style={{display: `${showComponent}`}}>
+        <div className="meal-detail container" style={{display: `${showComponent}`, color: 'white'}}>
             <img className="meal-photo"src={urls.regular}/>
                     <div className="information">
                         <h4 style={{fontSize: "25px", fontWeight: "400"}}>General Nutritional Information</h4>

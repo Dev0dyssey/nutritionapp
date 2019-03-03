@@ -1,4 +1,15 @@
 /* SET OUT THE GRID VIEW LAYOUT */
+body {
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(https://bit.ly/2TotWK6);
+    background-attachment: fixed;
+}
+
+.main {
+    color: white;
+}
+
 .image-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -63,4 +74,8 @@ img.meal-photo {
 @keyframes fadein {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+button {
+    color:#2ecc71;
 }

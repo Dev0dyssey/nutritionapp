@@ -19,7 +19,7 @@ class Comment extends React.Component {
             <button 
                 className="ui teal button"
                 type="submit"
-                style={{marginTop: '10px'}}
+                style={{marginTop: '10px', color: 'white', backgroundColor: '#2ecc71'}}
                 // ADDCOMMENT TAKEN FROM THE PROPS THAT HAS BEEN PASSED DOWN BY THE PARENT COMPONENT
                 onClick = {() => {this.props.addComment(this.state.comment)}}> 
                 Add Comment

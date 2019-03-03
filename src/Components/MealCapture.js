@@ -62,15 +62,15 @@ class MealCapture extends React.Component {
 
     return(   
             <div className="ui container" style={{textAlign: 'center', marginTop: '10px'}}>
-                <h1>MEAL CALORIE APP</h1>
-                <h3>Current user: {this.props.user}</h3>
+                <h1 className="main">MEAL CALORIE APP</h1>
+                <h3 className="main">Current user: {this.props.user}</h3>
                 {/* ADDED MOMENT LIBRARY TO HELP WITH TIME CAPTURE AND DISPLAY */}
-                <p>Date: {Moment().format('MMMM Do YYYY')}</p>
+                <p className="main">Date: {Moment().format('MMMM Do YYYY')}</p>
                 {/* RENDER THE CAPTURE FORM COMPONENT */}
                 <CaptureForm 
                     onSubmit = {this.onSubmit}
                 />
-                <div style={{marginTop: '10px'}}>
+                <div style={{marginTop: '10px', color: 'white'}}>
                 YOUR MEALS:
                     <br />
                     <span id="Meal">{this.state.meal} {this.state.calories}kcal</span>
