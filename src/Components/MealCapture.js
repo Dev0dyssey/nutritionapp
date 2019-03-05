@@ -5,6 +5,7 @@ import mealdatabase from '../api/mealdatabase';
 import CaptureForm from './CaptureForm';
 import Card from './Card';
 import MealDetail from './MealDetail';
+import ListFeatures from './ListFeatures';
 
 //COMPONENT TO CAPTURE DATA AND SHOW BACK TO THE USER
 class MealCapture extends React.Component {
@@ -91,6 +92,7 @@ class MealCapture extends React.Component {
                     mealDetail = {this.mealDetail}
                     mealData = {this.mealData}
                 />
+
             </div>  
         )
     };
