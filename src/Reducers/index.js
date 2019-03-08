@@ -8,6 +8,6 @@ const mealCaputreReducer = (mealInfo = null, action) => {
     return mealInfo;
 }
 
-export combineReducers({
+export default combineReducers({
     mealInfo: mealCaputreReducer
 });
