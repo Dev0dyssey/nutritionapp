@@ -7,6 +7,8 @@ import Card from './Card';
 import MealDetail from './MealDetail';
 import ListFeatures from './ListFeatures';
 
+import {connect} from 'react-redux';
+
 //COMPONENT TO CAPTURE DATA AND SHOW BACK TO THE USER
 class MealCapture extends React.Component {
     state = {
@@ -92,10 +94,13 @@ class MealCapture extends React.Component {
                     mealDetail = {this.mealDetail}
                     mealData = {this.mealData}
                 />
-
             </div>  
         )
     };
 }
 
-export default MealCapture;
+const mapStateToProps = (state)  => {
+    return ({mealName: state.mealName })
+}
+
+export default connect(mapStateToProps)(MealCapture);
