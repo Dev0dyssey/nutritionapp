@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-const mealName = (mealInfo = 'HELLO', action) => {
+const mealName = (mealInfo = null, action) => {
     if(action.type === 'MEAL_CAPTURE'){
         return action.payload;
     }

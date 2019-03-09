@@ -1,5 +1,9 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+import {captureMeal} from './Actions';
+
+
 class CaptureForm extends React.Component {
     state = {
         meal: '', 
@@ -51,7 +55,7 @@ class CaptureForm extends React.Component {
                 style={{marginTop: '10px', color: 'white', backgroundColor: '#2ecc71'}} 
                 className="ui button" 
                 type="submit" 
-                onClick={() => {this.onButtonClick(); this.logic_Help();}}>
+                onClick={() => {this.onButtonClick(); this.logic_Help(); this.props.captureMeal(this.state.meal)}}>
                 Capture Meal
             </button>
         </div>
@@ -59,4 +63,8 @@ class CaptureForm extends React.Component {
     }
 }
 
-export default CaptureForm;
+const mapStateToProps = (state) => {
+    return {mealName: state.mealName}
+}
+
+export default connect(mapStateToProps, {captureMeal})(CaptureForm);

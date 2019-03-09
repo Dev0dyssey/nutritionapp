@@ -1,9 +1,8 @@
-export const captureMeal = (meal, calories) => {
+export const captureMeal = (meal) => {
     return {
-        type: 'MEAL_CAPTURE'
+        type: 'MEAL_CAPTURE',
         payload: {
             meal: meal,
-            calories: calories
         }
     };
 };
