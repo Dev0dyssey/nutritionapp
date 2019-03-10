@@ -64,6 +64,7 @@ class CaptureForm extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {mealName: state.mealName}
 }
 

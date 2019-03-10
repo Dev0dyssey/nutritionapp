@@ -6,3 +6,12 @@ export const captureMeal = (meal) => {
         }
     };
 };
+
+export const comment = (text) => {
+    return {
+        type: 'ADD_COMMENT',
+        payload: {
+            comment: text
+        }
+    };
+};
