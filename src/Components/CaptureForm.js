@@ -34,7 +34,7 @@ class CaptureForm extends React.Component {
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <input 
-                            style={{textAlign: "center", width: '50%'}}
+                            style={{textAlign: "center", width: '50%', marginTop: '3.5em' ,marginBottom: '1em'}}
                             placeholder="Enter your Meal"  
                             type="text"
                             value={this.state.meal}
@@ -52,7 +52,7 @@ class CaptureForm extends React.Component {
                 </form> 
             {/* BUTTON TO CAPTURE THE MEAL DATA. WILL HAVE TEXT CHANGE ONCE CLICKED FOR THE FIRST SET OF DATA; STATE UPDATE IN INDEX.JS */}
             <button 
-                style={{marginTop: '10px', color: 'white', backgroundColor: '#2ecc71'}} 
+                style={{marginTop: '5em', color: 'white', backgroundColor: '#2ecc71'}} 
                 className="ui button" 
                 type="submit" 
                 onClick={() => {this.onButtonClick(); this.logic_Help(); this.props.captureMeal(this.state.meal)}}>
