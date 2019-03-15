@@ -65,6 +65,21 @@ class MealCapture extends React.Component {
 
     return(   
             <div className="ui container" style={{textAlign: 'center', marginTop: '10px'}}>
+
+                <div className="ui stackable three column grid buttons" style={{marginLeft: '25%'}}>
+
+                    <div className="twelve wide column"></div>
+
+                    <div className="four wide column">
+                        <button className="ui button">Login</button>
+                        <button className="ui button">Profile</button>
+                        <button className="ui button">Settings</button>
+                    </div>
+
+                </div>
+
+                <br />
+
                 <h1 className="main">MEAL CALORIE APP</h1>
                 <h3 className="main">Current user: {this.props.user}</h3>
                 {/* ADDED MOMENT LIBRARY TO HELP WITH TIME CAPTURE AND DISPLAY */}

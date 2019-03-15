@@ -4,7 +4,7 @@ const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
 
     return(
         <div className="meal-detail container" style={{display: `${showComponent}`, color: 'white'}}>
-            <img className="meal-photo"src={urls.regular}/>
+            <img className="meal-photo" alt="Selected meal" src={urls.regular}/>
                     <div className="information">
                         <h4 style={{fontSize: "25px", fontWeight: "400"}}>General Nutritional Information</h4>
                             <strong>{mealName}</strong>
