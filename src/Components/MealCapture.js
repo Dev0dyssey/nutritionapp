@@ -65,7 +65,7 @@ class MealCapture extends React.Component {
 
     return(   
             <div className="ui container" style={{textAlign: 'center', marginTop: '10px'}}>
-
+                {/* BUTTONS TO HOLD CONTROLS OF THE APP; LOGIN/LOGOUT AND SETTINGS */}
                 <div className="ui stackable three column grid buttons" style={{marginLeft: '25%'}}>
 
                     <div className="twelve wide column"></div>
@@ -73,8 +73,26 @@ class MealCapture extends React.Component {
                     <div className="four wide column">
                         <button className="ui button">Login</button>
                         <button className="ui button">Profile</button>
-                        <button className="ui button">Settings</button>
+                        {/* DROPDOWN FOR USER/ACCOUNT SETTINGS TAKEN FROM SEMANTIC UI */}
+                        <button className="ui simple dropdown button">
+                            <span className="text">Settings</span>
+                                <div className="menu">
+                                    <div className="item">
+                                        <i className="users icon"></i>
+                                        Profile
+                                    </div>
+                                    <div className="item">
+                                        <i className="lock icon"></i>
+                                        Security
+                                    </div>
+                                    <div className="item">
+                                        <i className="conversation icon"></i>
+                                        Contact Us
+                                    </div>
+                                </div>
+                        </button>
                     </div>
+                    
 
                 </div>
 
