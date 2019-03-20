@@ -71,23 +71,28 @@ class MealCapture extends React.Component {
                     <div className="twelve wide column"></div>
 
                     <div className="four wide column">
-                        <button className="ui button">Login</button>
-                        <button className="ui button">Profile</button>
                         {/* DROPDOWN FOR USER/ACCOUNT SETTINGS TAKEN FROM SEMANTIC UI */}
                         <button className="ui simple dropdown button">
-                            <span className="text">Settings</span>
+                            <span className="text" style={{textAlign: 'right'}}>
+                                <i className="align justify icon"></i>
+                                Login
+                            </span>
                                 <div className="menu">
                                     <div className="item">
                                         <i className="users icon"></i>
-                                        Profile
+                                        Logout
                                     </div>
                                     <div className="item">
                                         <i className="lock icon"></i>
-                                        Security
+                                        Settings
                                     </div>
                                     <div className="item">
                                         <i className="conversation icon"></i>
                                         Contact Us
+                                    </div>
+                                    <div className="item">
+                                        <i className="exclamation triangle icon"></i>
+                                        Report an Issue
                                     </div>
                                 </div>
                         </button>
