@@ -24,7 +24,7 @@ const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
                         </button>
 
                         <button className="ui twitter button">
-                            <i className="twitter button"></i>
+                            <i className="twitter icon"></i>
                             Twitter
                         </button>
 

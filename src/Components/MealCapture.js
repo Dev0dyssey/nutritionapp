@@ -5,6 +5,7 @@ import mealdatabase from '../api/mealdatabase';
 import CaptureForm from './CaptureForm';
 import Card from './Card';
 import MealDetail from './MealDetail';
+import NavButtons from './navbuttons';
 import ListFeatures from './ListFeatures';
 
 import {connect} from 'react-redux';
@@ -57,9 +58,9 @@ class MealCapture extends React.Component {
     const info = this.state.nutrition.slice(0,1).map((item) =>
         // JSX FRAGMENT TO REDUCE THE AMOUNT O <DIV> USED
         <>
-            <div>Calories: {item.food.nutrients.ENERC_KCAL}</div>
-            <div>Fat: {item.food.nutrients.FAT}%</div>
-            <div>Carbs: {item.food.nutrients.CHOCDF}%</div>
+            <div>Calories: {Math.round(item.food.nutrients.ENERC_KCAL)}</div>
+            <div>Fat: {Math.round(item.food.nutrients.FAT)}%</div>
+            <div>Carbs: {Math.round(item.food.nutrients.CHOCDF)}%</div>
         </>
     );
 
@@ -72,30 +73,7 @@ class MealCapture extends React.Component {
 
                     <div className="four wide column">
                         {/* DROPDOWN FOR USER/ACCOUNT SETTINGS TAKEN FROM SEMANTIC UI */}
-                        <button className="ui simple dropdown button">
-                            <span className="text" style={{textAlign: 'right'}}>
-                                <i className="align justify icon"></i>
-                                Login
-                            </span>
-                                <div className="menu">
-                                    <div className="item">
-                                        <i className="users icon"></i>
-                                        Logout
-                                    </div>
-                                    <div className="item">
-                                        <i className="lock icon"></i>
-                                        Settings
-                                    </div>
-                                    <div className="item">
-                                        <i className="conversation icon"></i>
-                                        Contact Us
-                                    </div>
-                                    <div className="item">
-                                        <i className="exclamation triangle icon"></i>
-                                        Report an Issue
-                                    </div>
-                                </div>
-                        </button>
+                        <NavButtons />
                     </div>
                     
 
