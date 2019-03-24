@@ -110,6 +110,13 @@ class MealCapture extends React.Component {
                     mealDetail = {this.mealDetail}
                     mealData = {this.mealData}
                 />
+
+                <footer>
+                <p>Created by: Dev0dyssey</p>
+                <p>Contact information: <a href="mailto:someone@example.com">
+                someone@example.com</a>.</p>
+                </footer>
+
             </div>  
         )
     };

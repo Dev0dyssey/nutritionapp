@@ -6,6 +6,11 @@ body {
     background-attachment: fixed;
 }
 
+footer {
+    color: white;
+    padding-top: 22rem;
+}
+
 .main {
     color: white;
 }
