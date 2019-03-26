@@ -1,6 +1,7 @@
 import unsplash from "../../api/unsplash";
 import mealdatabase from "../../api/mealdatabase";
 
+
 export const photoList = (value) => async dispatch => {
         const response = await unsplash.get('/search/photos', {
             params: {query: value}
