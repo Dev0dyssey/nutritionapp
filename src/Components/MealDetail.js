@@ -1,4 +1,5 @@
 import React from 'react';
+import { FacebookProvider, Like } from 'react-facebook';
 
 const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
 
@@ -27,12 +28,11 @@ const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
                             <i className="twitter icon"></i>
                             Twitter
                         </button>
-
                     </div>
                     <br/>
-                    <div className="ui mini input">
-                        <input type="text" style={{display: 'none'}}></input>
-                    </div>
+                    <FacebookProvider appId="meal-cal-log">
+                        <Like href="http://www.facebook.com" colorScheme="dark" showFaces share />
+                    </FacebookProvider>
                 </div>
         </div>
 
