@@ -82,7 +82,7 @@ class MealCapture extends React.Component {
                 <br />
 
                 <h1 className="main">MEAL CALORIE APP</h1>
-                <h3 className="main">Current user: {this.props.user}</h3>
+                <h3 className="main-welcome">Welcome {this.props.user}!</h3>
                 <img 
                     style={{borderRadius: "50%", height: "10rem", width: "10rem", marginBottom: "2em" }} 
                     alt="Profile icon" 
