@@ -128,8 +128,8 @@ class MealCapture extends React.Component {
 }
 
 const mapStateToProps = (state)  => {
-    console.log(state)
-    return ({mealName: state.mealName })
-}
+    console.log(state);
+    return {user: state.user};
+};
 
 export default connect(mapStateToProps)(MealCapture);

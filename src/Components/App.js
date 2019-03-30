@@ -5,9 +5,7 @@ import MealCapture from './MealCapture';
 const App = () => {
     return(
         <div className="ui container">
-            <MealCapture 
-                user = "Thomas"               
-            />
+            <MealCapture/>
         </div>
     );
 }
