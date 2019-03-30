@@ -2,8 +2,19 @@ import React from 'react';
 import './Card.css';
 
 const NavButtons = () => {
+
+    const mouseOver = (e) => {
+        e.target.style.backgroundColor='#2ecc71';
+        e.target.style.color='white';
+    }
+
+    const mouseOut = (e) => {
+        e.target.style.backgroundColor='';
+        e.target.style.color='';
+    }
+
     return(
-    <button className="ui simple dropdown button" style={{backgroundColor: '#2ecc71', color: 'white'}}>
+    <button className="ui simple dropdown button" onMouseEnter={mouseOver} onMouseLeave = {mouseOut}>
 
             <span className="text" style={{textAlign: 'right'}}>
                 <i className="align justify icon"></i>
