@@ -6,7 +6,6 @@ import CaptureForm from './CaptureForm';
 import Card from './Card';
 import MealDetail from './MealDetail';
 import NavButtons from './navbuttons';
-import ListFeatures from './ListFeatures';
 
 import {connect} from 'react-redux';
 
