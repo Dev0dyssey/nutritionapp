@@ -10,7 +10,6 @@ const SettingsModal = () => {
         trigger={<span>Settings</span>}
         >
 
-            
                 <Modal.Content style={{backgroundColor: '#2ecc71', borderRadius: '15px', color: 'white'}}>
                     <Modal.Description>
                         <p style={{paddingBottom: '67px', fontSize: '17px'}}>Change Username<i className="material-icons" style={{marginLeft: '20px'}}>edit</i></p>
