@@ -30,6 +30,7 @@ const MealDetail = ({mealName, showComponent, urls, nutrition}) => {
                         </button>
                     </div>
                     <br/>
+                    <br/>
                     <FacebookProvider appId="meal-cal-log">
                         <Like href="http://www.facebook.com" colorScheme="dark" showFaces share />
                     </FacebookProvider>

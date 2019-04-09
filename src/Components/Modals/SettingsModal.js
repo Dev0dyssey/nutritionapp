@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Modal} from 'semantic-ui-react';
+import { Modal } from 'semantic-ui-react';
 
 const SettingsModal = () => {
     return (
