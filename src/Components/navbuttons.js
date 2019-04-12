@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css';
 import SettingsModal from './Modals/SettingsModal';
+import ContactUsModal from './Modals/ContactUsModal';
 
 const NavButtons = () => {
 
@@ -27,15 +28,17 @@ const NavButtons = () => {
                     <i className="users icon"></i>
                     Logout
                 </div>
-
+                
+                {/* Settings button */}
                 <div className="item" style={{color: 'white'}}>
                     <i className="lock icon"></i>
                     <SettingsModal />
                 </div>
 
+                {/* Contact Us button */}
                 <div className="item" style={{color: 'white'}}>
                     <i className="conversation icon"></i>
-                    Contact Us
+                    <ContactUsModal />
                 </div>
 
                 <div className="item" style={{color: 'white'}}>
