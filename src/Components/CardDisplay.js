@@ -14,17 +14,17 @@ class CardDisplay extends React.Component {
     }
 
     render(){
-        const {description, id, urls} = this.props.image
-        const {meal, calories,mealDetail, mealData} = this.props
+        const {alt_description, id, urls} = this.props.image;
+        const {meal, calories,mealDetail, mealData} = this.props;
 
         return(
             // CARD ELEMENT FROM THE SEMANTIC UI
             <div className="ui card">
                 <div className="image" onClick={() => {
-                        mealDetail(description, meal, urls);
+                        mealDetail(alt_description, meal, urls);
                         mealData(meal);
                     }}>
-                    <img className="image" alt={description} key={id} src={urls.regular} />
+                    <img className="image" alt={alt_description} key={id} src={urls.regular} />
                 </div>
 
                 <div className="content">

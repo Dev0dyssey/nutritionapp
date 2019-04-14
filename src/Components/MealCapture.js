@@ -15,11 +15,11 @@ class MealCapture extends React.Component {
         meal: '',
         calories: '',
         image: [],
-        selectedMeal: '',
         selectedName: '',
         showComponent: 'none',
         urls: '',
-        nutrition: []
+        nutrition: [],
+        alt: ''
     }
 
     // ASYNC FUNCTION TO CAPTURE API CALL RESPONSE AS WELL AS TO SET STATE WITH THE VALUE THAT WAS PROVIDED BYT THE <CAPTUREFORM /> ELEMENT
@@ -41,12 +41,12 @@ class MealCapture extends React.Component {
         console.log(this.state.nutrition);
     }
 
-    mealDetail = (meal, name, urls) => {
+    mealDetail = (alt_description, name, urls) => {
         this.setState({
-            selectedMeal: meal,
             selectedName: name,
             showComponent: '',
-            urls: urls
+            urls: urls,
+            alt: alt_description
         });
 
     }
@@ -62,6 +62,8 @@ class MealCapture extends React.Component {
             <div>Carbs: {Math.round(item.food.nutrients.CHOCDF)}%</div>
         </>
     );
+
+    console.log(this.state.image);
 
     return(   
             <div className="ui container" style={{textAlign: 'center', marginTop: '10px'}}>
@@ -100,11 +102,12 @@ class MealCapture extends React.Component {
                 </div>
 
                 <MealDetail
-                    detail = {this.state.selectedMeal}
+                    // detail = {this.state.selectedMeal}
                     mealName = {this.state.selectedName}
                     showComponent = {this.state.showComponent}
                     urls = {this.state.urls}
                     nutrition = {info}
+                    alt  = {this.state.alt}
                 />
 
                 <Card 
@@ -121,7 +124,8 @@ class MealCapture extends React.Component {
                 someone@example.com</a>.</p>
                 </footer>
 
-            </div>  
+            </div>
+            
         )
     };
 }

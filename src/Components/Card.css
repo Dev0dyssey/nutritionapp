@@ -11,8 +11,11 @@ footer {
     padding-top: 22rem;
 }
 
-Radio {
-    color: white;
+/* Media query to alter size of the contact us modal */
+@media screen and (max-width: 450px) {
+    #contactModal{
+        width: 50vw !important ;
+    }
 }
 
 .main {

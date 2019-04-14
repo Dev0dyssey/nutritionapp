@@ -4,11 +4,12 @@ import { Modal, Checkbox, Input, Button } from 'semantic-ui-react';
 const ContactUsModal = () => {
     return (
         <Modal
+            id='contactModal'
             dimmer={'blurring'}
             trigger={<span>Contact Us</span>}
-            style={{width: '25%'}}
+            style={{width: '25vw'}}
         >
-            <Modal.Content style = {{backgroundColor: '#2ecc71', borderRadious: '15px', color: 'white'}}>
+            <Modal.Content style = {{backgroundColor: '#2ecc71', color: 'white'}}>
                 <Modal.Description style={{color: 'white'}}>
                     <Input style={{width: '100%', marginBottom: '1em'}} placeholder="Reason of contact" />
                         <br />
