@@ -24,7 +24,7 @@ class MealCapture extends React.Component {
 
     // ASYNC FUNCTION TO CAPTURE API CALL RESPONSE AS WELL AS TO SET STATE WITH THE VALUE THAT WAS PROVIDED BYT THE <CAPTUREFORM /> ELEMENT
     onSubmit = async (value1, value2) => {
-        // MOVE PARTS OF THE AXIOS CODE INTO A SEPARATE API DIRECTORY AND FILE, TO CREATE A CUSTOM AXIOS CLIENT IN THE APP
+        // MOVE PARTS OF THE AXIOS CODE INTO A SEPARATE API DIRECTORY AND FILE, TO CREATE A CUSTOM AXIOS CLIENT
         const response = await unsplash.get('/search/photos', {
             params: {query: value1}
         });
