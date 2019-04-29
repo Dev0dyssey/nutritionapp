@@ -9,6 +9,7 @@ const ContactUsModal = () => {
             trigger={<span>Contact Us</span>}
             style={{width: '25vw'}}
         >
+        {/* Modal layout and styling */}
             <Modal.Content style = {{backgroundColor: '#2ecc71', color: 'white'}}>
                 <Modal.Description style={{color: 'white'}}>
                     <Input style={{width: '100%', marginBottom: '1em'}} placeholder="Reason of contact" />
