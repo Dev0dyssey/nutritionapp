@@ -2,6 +2,7 @@ import {combineReducers} from 'redux';
 
 import photoList from './photoList';
 import nutrition from './nutrition';
+// import googleAuth from './googleAuth';
 
 const name = () => {
     return 'Thomas'
@@ -10,5 +11,6 @@ const name = () => {
 export default combineReducers({
     photos: photoList,
     nutrition: nutrition,
-    user: name
+    user: name,
+    // auth: googleAuth
 });

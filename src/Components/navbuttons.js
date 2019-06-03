@@ -3,6 +3,7 @@ import './Card.css';
 import SettingsModal from './Modals/SettingsModal';
 import ContactUsModal from './Modals/ContactUsModal';
 import ProfileModal from './Modals/ProfileModal';
+import GoogleAuth from './GoogleAuth';
 
 const NavButtons = () => {
 
@@ -21,7 +22,7 @@ const NavButtons = () => {
 
             <span className="text" style={{textAlign: 'right'}}>
                 <i className="align justify icon"></i>
-                Login
+                <GoogleAuth />
             </span>
 
             <div className="menu" style={{backgroundColor: '#2ecc71'}}>
