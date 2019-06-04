@@ -22,13 +22,13 @@ const NavButtons = () => {
 
             <span className="text" style={{textAlign: 'right'}}>
                 <i className="align justify icon"></i>
-                <GoogleAuth />
+                Menu
             </span>
 
             <div className="menu" style={{backgroundColor: '#2ecc71'}}>
                 <div className="item" style={{color: 'white'}}>
                     <i className="sign out alternate icon"></i>
-                    Logout
+                    <GoogleAuth />
                 </div>
 
                 <div className="item" style={{color: 'white'}}>

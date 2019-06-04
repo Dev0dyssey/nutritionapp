@@ -6,7 +6,6 @@ import CaptureForm from './CaptureForm';
 import Card from './Card';
 import MealDetail from './MealDetail';
 import NavButtons from './navbuttons';
-import GoogleAuth from './GoogleAuth';
 
 import {connect} from 'react-redux';
 
@@ -93,7 +92,6 @@ class MealCapture extends React.Component {
                 {/* ADDED MOMENT LIBRARY TO HELP WITH TIME CAPTURE AND DISPLAY */}
                 <p className="main">Date: {Moment().format('MMMM Do YYYY')}</p>
                 {/* RENDER THE CAPTURE FORM COMPONENT */}
-                <GoogleAuth />
                 <CaptureForm 
                     onSubmit = {this.onSubmit}
                 />
