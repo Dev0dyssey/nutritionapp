@@ -1,6 +1,5 @@
 import React from 'react';
 import Moment from 'moment';
-import unsplash from '../api/unsplash';
 import mealdatabase from '../api/mealdatabase';
 import CaptureForm from './CaptureForm';
 import Card from './Card';
@@ -8,13 +7,11 @@ import MealDetail from './MealDetail';
 import NavButtons from './navbuttons';
 
 import {connect} from 'react-redux';
+import { getPhotos } from '../Actions';
 
 //COMPONENT TO CAPTURE DATA AND SHOW BACK TO THE USER
 class MealCapture extends React.Component {
     state = {
-        meal: '',
-        calories: '',
-        image: [],
         selectedName: '',
         showComponent: 'none',
         urls: '',
@@ -22,16 +19,9 @@ class MealCapture extends React.Component {
         alt: ''
     }
 
-    // ASYNC FUNCTION TO CAPTURE API CALL RESPONSE AS WELL AS TO SET STATE WITH THE VALUE THAT WAS PROVIDED BYT THE <CAPTUREFORM /> ELEMENT
-    onSubmit = async (value1, value2) => {
-        // MOVE PARTS OF THE AXIOS CODE INTO A SEPARATE API DIRECTORY AND FILE, TO CREATE A CUSTOM AXIOS CLIENT
-        const response = await unsplash.get('/search/photos', {
-            params: {query: value1}
-        });
-
-        this.setState({meal: value1});
-        this.setState({calories: value2});
-        this.setState({image: response.data.results});
+    // Get meal data and Action Creators from React-Redux
+    onSubmit = () => {
+        this.props.getPhotos(this.props.meal);
     }
 
     mealData = async (term) => {
@@ -95,11 +85,6 @@ class MealCapture extends React.Component {
                 <CaptureForm 
                     onSubmit = {this.onSubmit}
                 />
-                <div style={{marginTop: '10px', color: 'white'}}>
-                YOUR MEALS:
-                    <br />
-                    <span id="Meal">{this.state.meal} {this.state.calories}kcal</span>
-                </div>
 
                 <MealDetail
                     // detail = {this.state.selectedMeal}
@@ -111,9 +96,8 @@ class MealCapture extends React.Component {
                 />
 
                 <Card 
-                    meal = {this.state.meal}
-                    calories = {this.state.calories}
-                    images = {this.state.image}
+                    meal = {this.props.meal}
+                    
                     mealDetail = {this.mealDetail}
                     mealData = {this.mealData}
                 />
@@ -132,7 +116,11 @@ class MealCapture extends React.Component {
 
 const mapStateToProps = (state)  => {
     console.log(state);
-    return {user: state.user};
+    return {
+        user: state.user,
+        meal: state.meal,
+        image: state.img
+    };
 };
 
-export default connect(mapStateToProps)(MealCapture);
+export default connect(mapStateToProps, { getPhotos })(MealCapture);
