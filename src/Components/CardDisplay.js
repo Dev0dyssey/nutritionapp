@@ -2,8 +2,6 @@ import React from 'react';
 import Moment from 'moment';
 import Comment from './Comment';
 
-import { connect } from 'react-redux';
-
 class CardDisplay extends React.Component {
     // STATE DECLARATION FOR THE COMPONENT, ESPECIALLY FOR THE COMMENTS
     state = {
@@ -16,17 +14,17 @@ class CardDisplay extends React.Component {
     }
 
     render(){
-        const {alt_description, id} = this.props.image;
-        const {meal, calories,mealDetail, mealData, url} = this.props;
+        const {alt_description, id, urls} = this.props.image;
+        const {meal, calories,mealDetail, mealData} = this.props;
 
         return(
             // CARD ELEMENT FROM THE SEMANTIC UI
             <div className="ui card">
                 <div className="image" onClick={() => {
-                        mealDetail(alt_description, meal);
+                        mealDetail(alt_description, meal, urls);
                         mealData(meal);
                     }}>
-                    <img className="image" alt={alt_description} key={id} src={url} />
+                    <img className="image" alt={alt_description} key={id} src={urls.regular} />
                 </div>
 
                 <div className="content">
@@ -55,10 +53,4 @@ class CardDisplay extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        image: state.img
-    }
-}
-
-export default connect (mapStateToProps)(CardDisplay);
+export default CardDisplay;
