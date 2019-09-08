@@ -2,6 +2,8 @@ import React from 'react';
 import Moment from 'moment';
 import Comment from './Comment';
 
+import './Card.css';
+
 class CardDisplay extends React.Component {
     // STATE DECLARATION FOR THE COMPONENT, ESPECIALLY FOR THE COMMENTS
     state = {
@@ -24,7 +26,7 @@ class CardDisplay extends React.Component {
                         mealDetail(alt_description, meal, urls);
                         mealData(meal);
                     }}>
-                    <img className="image" alt={alt_description} key={id} src={urls.regular} />
+                    <img className="image" alt={alt_description} key={id} src={urls.regular} style={{height: "auto", "max-height": '250px', width: '100%'}}/>
                 </div>
 
                 <div className="content">
